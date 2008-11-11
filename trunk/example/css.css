@@ -1,0 +1,161 @@
+/* @override
+	http://localhost/pdftk-php/trunk/example/css.css
+*/
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+	margin: 0px;
+	padding: 0px;
+}
+
+img {
+	border: none;
+}
+
+a {
+	text-decoration: none;
+	color: #0000CC;
+}
+
+a:hover {
+	color: #ffc089;
+	text-decoration: underline;
+}
+
+/* @group Typography */
+
+body {
+	font: 90%/1.2em "Myriad Pro", "Calibri", "Helvetica Neue", "Trebuchet MS", Helvetica, "Nimbus Sans L", Arial, sans-serif;
+	text-align: center;
+	color: #3F4146;
+}
+
+h1 {
+	margin-bottom: .4em;
+}
+
+h2 {
+	margin-bottom: .3em;
+	padding-bottom: .2em;
+	border-bottom-style: solid;
+	border-bottom-width: .1em;
+}
+
+p {
+	margin-bottom: .5em;
+}
+
+/* @end Typography*/
+
+/* @group Structure */
+
+#wrapper {
+	width: 80%;
+	margin: 0 auto;
+	text-align: left;
+	padding: 10px 2%;
+}
+
+#top {
+	margin-bottom: 2em;
+}
+
+.col {
+	width: 32%;
+	float: left;
+	margin-right: 2%;
+}
+
+.last {
+	margin-right: 0;
+}
+
+/* @group Form */
+
+.form label {
+	display: block;
+	width: 33%;
+	float: left;
+	clear: both;
+	padding-top: .3em;
+}
+
+.form input {
+	float: left;
+	font: 90%/1.2em "Myriad Pro", "Calibri", "Helvetica Neue", "Trebuchet MS", Helvetica, "Nimbus Sans L", Arial, sans-serif;
+	color: #838383;
+	margin-bottom: .4em;
+}
+
+.form .wide {
+	width: 64%;
+}
+
+.form .button {
+	color: #3F4146;
+}
+
+.message {
+	background-color: #ffc089;
+	display: block;
+	padding: .5em;
+	color: #FFFFFF;
+	font-size: 110%;
+	font-weight: bold;
+}
+
+/* @end Form*/
+
+/* @group List */
+
+.navigation {
+	color: #838383;
+	padding-bottom: .7em;
+}
+
+#list table {
+	border: 1px solid #3F4146;
+	border-collapse: collapse;
+	font-size: 90%;
+	width: 100%;
+}
+
+#list table th {
+	padding: 5px;
+	text-transform: uppercase;
+	background-color: #3F4146;
+	color: #FFFFFF;
+}
+
+#list .even {
+	background-color: #f2f2f2;
+}
+
+#list table td {
+	border-left: 1px solid #CCCCCC;
+	padding: 5px;
+	color: #666666;
+}
+
+/* @end List*/
+
+#footer {
+	clear: both;
+	font-size: 80%;
+	text-align: center;
+	padding-top: 5em;
+}
+
+#footer ul {
+	list-style: none;
+}
+
+#footer li {
+	display: inline;
+	padding-right: 1em;
+}
+
+#footer p {
+	padding-bottom: 2em;
+}
+
+/* @end Structure*/
