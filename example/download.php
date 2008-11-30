@@ -14,7 +14,7 @@
 	}
 	
 	if (mysql_num_rows($result) == 1) {
-		// Include class for form injection
+		// Include pdftk-php class
 		require('../pdftk-php.php');
 		
 		// Initiate the class
@@ -41,7 +41,7 @@
 		// See the documentation of pdftk-php.php for more explanation of these other variables.
 		
 		// Used for radio buttons and check boxes
-		// Example: $fdf_data_names = array('checkbox1' => $pdf_checkbox1,'checkbox2' => $pdf_checkbox2,'checkbox3' => $pdf_checkbox3,'checkbox4' => $pdf_checkbox4); 
+		// Example: with $pdf_checkbox1, 2, 3, etc equal to Yes or Off, $fdf_data_names = array('checkbox1' => $pdf_checkbox1,'checkbox2' => $pdf_checkbox2,'checkbox3' => $pdf_checkbox3,'checkbox4' => $pdf_checkbox4); 
 		$fdf_data_names = array(); 
 		$fields_hidden = array(); // Used to hide form fields
 		$fields_readonly = array(); // Used to make fields read only - however, flattening the output in with pdftk will in effect make every field read only. If you don't want a flattened pdf and still want some read only fields, use this variable and remove the flatten flag near line 70 in pdftk-php.php
