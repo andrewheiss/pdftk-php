@@ -1,8 +1,6 @@
-/* @override
-	http://localhost/pdftk-php/example/css.css
-*/
+/* @override http://localhost/pdftk-php/example/css.css */
 
-h1, h2, h3, h4, h5, h6, p, ul, li {
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
 	margin: 0px;
 	padding: 0px;
 }
@@ -56,7 +54,7 @@ p {
 }
 
 #top {
-	margin-bottom: 2em;
+	margin: 3em 0 2em;
 }
 
 .col {

@@ -17,8 +17,8 @@
 <div id="wrapper">
   <div id="top">
       <h1>pdftk-php Example</h1>
-      <p class="navigation"><a href="index.php">Back to main page &raquo;</a></p>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis ligula lorem, consequat eget, tristique nec, auctor quis, purus. Vivamus ut sem. Fusce aliquam nunc vitae purus. Aenean viverra malesuada libero. Fusce ac quam. Donec neque. Nunc venenatis enim nec quam. Cras faucibus, justo vel accumsan aliquam, tellus dui fringilla quam, in condimentum augue lorem non tellus.</p>
+      <p class="navigation"><a href="index.php">&laquo; Back to main page</a></p>
+      <p>Here's a list of all the forms that have been submitted to the database. You can download the individual PDF files from this table.</p>
   </div>
   <div id="list">
   	<h2>Submitted forms</h2>
