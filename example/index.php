@@ -78,7 +78,7 @@
   <div id="top">
       <h1>pdftk-php Example</h1>
       <p>See <a href="../README.txt">/README.txt</a> for detailed information about how to install this example application.</p>
-      <p>This application collects data from users via a web form or through a submittable PDF form. It stores the data in a MySQL database. The data can then be retrieved, forged into an FDF file, and injected in an empty PDF form, creating a custom PDF file on the fly. 
+      <p>This application collects data from users via a web form or through a submittable PDF form. It stores the data in a MySQL database. The data can then be retrieved, forged into an FDF file, and injected in an empty PDF form, creating a custom PDF file on the fly.</p>
   </div>
   <div class="col">
   	<h2>View stored data</h2>
@@ -114,9 +114,9 @@
   <div id="footer">
   	<p>Simple working example of pdftk-php, created by <a href="http://www.andrewheiss.com">Andrew Heiss</a>, September 2008. <br />Licensed under a <a href="http://www.opensource.org/licenses/bsd-license.php">new BSD license</a>.</p>
   	<ul>
-    	<li><a href="http://code.google.com/p/pdftk-php/">Project home</a></li>
-        <li><a href="http://code.google.com/p/pdftk-php/issues/list">Report an issue</a></li>
-        <li><a href="http://groups.google.com/group/pdftk-php">Support</a></li>
+    	<li><a href="http://www.andrewheiss.com/projects/pdftk-php/">Project home</a></li>
+        <li><a href="http://github.com/andrewheiss/pdftk-php/issues">Report an issue</a></li>
+        <li><a href="http://wiki.github.com/andrewheiss/pdftk-php">Support</a></li>
     </ul>
   </div>
 </div>
