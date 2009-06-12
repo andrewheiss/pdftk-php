@@ -53,9 +53,9 @@
   <div id="footer">
   	<p>Simple working example of pdftk-php, created by <a href="http://www.andrewheiss.com">Andrew Heiss</a>, September 2008. <br />Licensed under a <a href="http://www.opensource.org/licenses/bsd-license.php">new BSD license</a>.</p>
   	<ul>
-    	<li><a href="http://code.google.com/p/pdftk-php/">Project home</a></li>
-        <li><a href="http://code.google.com/p/pdftk-php/issues/list">Report an issue</a></li>
-        <li><a href="http://groups.google.com/group/pdftk-php">Support</a></li>
+    	<li><a href="http://www.andrewheiss.com/projects/pdftk-php/">Project home</a></li>
+        <li><a href="http://github.com/andrewheiss/pdftk-php/issues">Report an issue</a></li>
+        <li><a href="http://wiki.github.com/andrewheiss/pdftk-php">Support</a></li>
     </ul>
   </div>
 </div>
