@@ -123,7 +123,7 @@
 			return $fdf;
 		}
 		
-		protected function escape_pdf_string( $ss ) {
+		public function escape_pdf_string( $ss ) {
 		  $backslash= chr(0x5c);
 		  $ss_esc= '';
 		  $ss_len= strlen( $ss );
