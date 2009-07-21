@@ -244,7 +244,7 @@
 			$fdf.= "<< "; // open dictionary
 		
 			if( gettype($value)== 'array' ) { // parent; recurse
-			  $fdf.= "/T (".escape_pdf_string( (string)$key ).") "; // partial field name
+			  $fdf.= "/T (".$this->escape_pdf_string( (string)$key ).") "; // partial field name
 			  $fdf.= "/Kids [ ";                                    // open Kids array
 		
 			  // recurse
