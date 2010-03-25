@@ -19,33 +19,29 @@
 #
 #	Purpose: Insert cleaned user data into the database
 #
-#	Other called functions: cleanText() - found in _dbConfig.php
-#
 #############################################################################
 	
 	function process_form() {
-	
-		// Connect to database
-		require_once("_dbConfig.php");
-	
-		// Save data from the submitted variables as shorter variables
-		$firstname = cleanText($_POST['firstname']);
-		$lastname = cleanText($_POST['lastname']);
-		$email = cleanText($_POST['email']);
 		
-		// Insert all the data from above into the table in the database
-		$sql = "INSERT INTO users (firstname, lastname, email) VALUES ('$firstname', '$lastname', '$email')";
-		$result = mysql_query($sql);
+		require('_dbConfig.php');
 		
+		$sql = "INSERT INTO users (firstname, lastname, email) VALUES (:firstname, :lastname, :email)";
+		
+		$q = $conn->prepare($sql);
+		$q->execute(array(':firstname' => $_POST['firstname'], 
+						  ':lastname' => $_POST['lastname'], 
+						  ':email' => $_POST['email']
+						 ));
+			
 		// If it worked, say so...
-		if ($result) {
+		if ($q->rowCount() == 1) {
 			$message = "Successfully inserted";
 		} else {
 			$message = "There was an error";
 		}
 		
 		// If the form was submitted with a PDF, just show a clean confirmation page. Otherwise, show page with message
-		if ($_POST['submitted'] == "pdf") {
+		if (array_key_exists('submitted', $_POST) && $_POST['submitted'] == "pdf") {
 			echo $message . "! Thanks!";
 		} else {
 			show_form($message);

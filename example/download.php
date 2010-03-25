@@ -1,19 +1,20 @@
 <?php
 	// Connect to the database
-	require_once("_dbConfig.php");
+	require("_dbConfig.php");
 	
 	// Put the unique user id in a variable - the script know what record to pull from the database because of this variable, which comes to the script as a GET variable in this case. You could/should use a fancier, securer, less user-editable way of transmitting ids, like using a unique md5 hash for the id... again, this is just a simple example
 	$id = $_GET['id'];
 	
-	// Retrieve data from database
-	$sql = "SELECT * FROM users WHERE id = '$id' LIMIT 1";
-	$result = mysql_query($sql);
-	
-	if (!$result) {
-		die('Could not query: ' . mysql_error());
-	}
-	
-	if (mysql_num_rows($result) == 1) {
+	$sql = "SELECT COUNT(*) FROM users WHERE id = :id LIMIT 1";
+	$q = $conn->prepare($sql);
+	$q->execute(array(':id' => $id));
+		
+	if ($q->fetchColumn() == 1) {
+		// // Retrieve data from database
+		$sql = "SELECT * FROM users WHERE id = :id LIMIT 1";
+		$q = $conn->prepare($sql);
+		$q->execute(array(':id' => $id));
+		
 		// Include pdftk-php class
 		require('../pdftk-php.php');
 		
@@ -27,7 +28,7 @@
 		// You can also format the MySQL data how you want here. One common example is formatting a date saved in the database. For example:
 		// $pdf_date = date("l, F j, Y, g:i a", strtotime($data['date']));
 		
-		$data = mysql_fetch_array($result);
+		$data = $q->fetch();
 		$pdf_firstname = $data['firstname'];
 		$pdf_lastname = $data['lastname'];
 		$pdf_email = $data['email'];

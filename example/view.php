@@ -1,10 +1,10 @@
 <?php
 	// Connect to the database and the table
-	require_once("_dbConfig.php");
+	require("_dbConfig.php");
 	
 	// Get data from database
 	$sql = "SELECT * FROM users";
-	$result = mysql_query($sql);
+	$result = $conn->query($sql);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -34,7 +34,7 @@
 		$iRow = 0;
 		
 		// Loop through all the rows in the database
-        while ($user = mysql_fetch_array($result)) {
+        while ($user = $result->fetch()) {
 			$iRow++; // Increase counter
 			$rowColor = ($iRow % 2) ? "" : "class=\"even\""; // If the row is even, put a CSS class on it
         ?>
