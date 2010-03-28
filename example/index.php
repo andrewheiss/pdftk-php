@@ -31,10 +31,9 @@
 		// Save data from the submitted variables as shorter variables
 		$firstname = cleanText($_POST['firstname']);
 		$lastname = cleanText($_POST['lastname']);
-		$email = cleanText($_POST['email']);
 		
 		// Insert all the data from above into the table in the database
-		$sql = "INSERT INTO users (firstname, lastname, email) VALUES ('$firstname', '$lastname', '$email')";
+		$sql = "INSERT INTO users (firstname, lastname) VALUES ('$firstname', '$lastname')";
 		$result = mysql_query($sql);
 		
 		// If it worked, say so...
@@ -100,10 +99,6 @@
       <p>
         <label for="lastname">Last Name: </label>
         <input class="wide" type="text" name="lastname" id="lastname" />
-      </p>
-      <p>
-        <label for="email">E-mail: </label>
-        <input class="wide" type="text" name="email" id="email" />
       </p>
       <p>
       	<label></label>

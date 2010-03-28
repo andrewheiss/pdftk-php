@@ -30,13 +30,12 @@
 		$data = mysql_fetch_array($result);
 		$pdf_firstname = $data['firstname'];
 		$pdf_lastname = $data['lastname'];
-		$pdf_email = $data['email'];
 
 		// $fdf_data_strings associates the names of the PDF form fields to the PHP variables you just set above. In order to work correctly the PDF form field name has to be exact. PDFs made in Acrobat generally have simpler names - just the name you assigned to the field. PDFs made in LiveCycle Designer nest their forms in other random page elements, creating a long and hairy field name. You can use pdftk to discover the real names of your PDF form fields: run "pdftk form.pdf dump_data_fields > form-fields.txt" to generate a report.
 
 		// Example of field names from a PDF created in LiveCycle:
 		// $fdf_data_strings= array('form1[0].#subform[0].#area[0].LastName[0]' => $pdf_lastname,  'form1[0].#subform[0].#area[0].FirstName[0]' => $pdf_firstname, 'form1[0].#subform[0].#area[0].EMail[0]' => $pdf_email, );
-		$fdf_data_strings= array('firstname' => $pdf_firstname,  'lastname' => $pdf_lastname, 'email' => $pdf_email);
+		$fdf_data_strings= array('firstname' => $pdf_firstname,  'lastname' => $pdf_lastname);
 		
 		// See the documentation of pdftk-php.php for more explanation of these other variables.
 		
