@@ -25,12 +25,11 @@
 		
 		require('_dbConfig.php');
 		
-		$sql = "INSERT INTO users (firstname, lastname, email) VALUES (:firstname, :lastname, :email)";
+		$sql = "INSERT INTO users (firstname, lastname) VALUES (:firstname, :lastname)";
 		
 		$q = $conn->prepare($sql);
 		$q->execute(array(':firstname' => $_POST['firstname'], 
-						  ':lastname' => $_POST['lastname'], 
-						  ':email' => $_POST['email']
+						  ':lastname' => $_POST['lastname']
 						 ));
 			
 		// If it worked, say so...
@@ -96,10 +95,6 @@
       <p>
         <label for="lastname">Last Name: </label>
         <input class="wide" type="text" name="lastname" id="lastname" />
-      </p>
-      <p>
-        <label for="email">E-mail: </label>
-        <input class="wide" type="text" name="email" id="email" />
       </p>
       <p>
       	<label></label>

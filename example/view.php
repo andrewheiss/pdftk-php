@@ -26,7 +26,6 @@
           <tr>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>E-mail Address</th>
             <th>Download PDF</th>
           </tr>
         <?php
@@ -41,7 +40,6 @@
           <tr <?php echo $rowColor; // actually put the rowColor class name ?>>
             <td><?php echo $user["firstname"]; ?></td>
             <td><?php echo $user["lastname"]; ?></td>
-            <td><?php echo $user["email"]; ?></td>
             <td><a href="download.php?id=<?php echo $user['id']; //Download page in this case uses the primary key of the row to select the data to create the pdf. ?>">Download</a></td>
           </tr>
         <?php
